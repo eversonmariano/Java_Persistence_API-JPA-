@@ -10,8 +10,9 @@ public class obterPedido {
         DAO<Pedido> dao = new DAO<>(Pedido.class);
 
         Pedido pedido = dao.obterPorID(1L);
-
-
         dao.fechar();
+
+
+
     }
 }
