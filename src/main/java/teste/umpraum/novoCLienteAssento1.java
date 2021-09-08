@@ -13,7 +13,7 @@ public class novoCLienteAssento1 {
 
         DAO<Object> dao = new DAO<>();
 
-        dao.abriTrasacao()
+        dao.abrirTrasacao()
                 .incluir(assento)
                 .incluir(cliente)
                 .fecharTrasacao()
