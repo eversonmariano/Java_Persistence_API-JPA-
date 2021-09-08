@@ -2,8 +2,8 @@ package teste.umpramuitos;
 
 import infra.DAO;
 import modelo.basico.Produto;
-import modelo.umpramuitos.Pedido;
 import modelo.umpramuitos.itemPedido;
+import modelo.umpramuitos.Pedido;
 
 public class novoPedido {
 
@@ -12,7 +12,7 @@ public class novoPedido {
         DAO<Object> dao = new DAO<>();
 
         Pedido pedido = new Pedido();
-        Produto produto = new Produto("Geladeira", 2789.88);
+        Produto produto = new Produto("Geladeira", 2789.99);
         itemPedido item = new itemPedido(pedido, produto, 10);
 
         dao.abrirTrasacao()
@@ -21,8 +21,5 @@ public class novoPedido {
                 .incluir(item)
                 .fecharTrasacao()
                 .fechar();
-
-
-
     }
 }
